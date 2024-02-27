@@ -1,0 +1,65 @@
+{
+  "preamble": {
+    "title": "golddydev/mint-cip68",
+    "description": "Aiken contracts for project 'golddydev/mint-cip68'",
+    "version": "0.0.0",
+    "plutusVersion": "v2",
+    "compiler": {
+      "name": "Aiken",
+      "version": "v1.0.23-alpha+8584adc"
+    },
+    "license": "Apache-2.0"
+  },
+  "validators": [
+    {
+      "title": "mint.mint",
+      "redeemer": {
+        "title": "redeemer",
+        "schema": {
+          "$ref": "#/definitions/mint~1Action"
+        }
+      },
+      "parameters": [
+        {
+          "title": "price_in_ada",
+          "schema": {
+            "$ref": "#/definitions/Int"
+          }
+        },
+        {
+          "title": "creator",
+          "schema": {
+            "$ref": "#/definitions/ByteArray"
+          }
+        }
+      ],
+      "compiledCode": "5902d10100003232323232323232322322322232533300a32323232533300e3370e9000180680089919191919191919191919191919299980f98110010991919299980f99b8748000c0780044c8c8c8c94ccc08ccdc3a40000022a666046a66604666e1c01d200213370e00c90010a5013370e646464a66604c66e1d20020011480004dd698159812001181200099299981299b87480080045300103d87a8000132323300100100222533302b00114c103d87a8000132323232533302c3371e9110000213374a9000198181ba80014bd700998030030019bad302d003375c6056004605e004605a0026eacc0a8c08c008c08c004cc03000922010001f14a02a66604666e1c01d200113370e00c90008a50302101b3756604c604e603e002604a002603a0022c646600200201844a6660460022980103d87a8000132325333022323253330243370e9000000899b8f375c6052604400403c2940c088004c8c004c084c004c08400c8c0a00044cdd2a40006604c00497ae013300400400130270023025001375a603e0046eb4c07800c58c080004c080008c078004c8c8c94ccc06ccdc3a4004002297adef6c601375660406032004603200266004002014646600200200644a66603a002297adef6c60132323232533301e3371e9101000021003133022337606ea4008dd3000998030030019bab301f003375c603a0046042004603e00244646600200200644a66603c0022980103d87a8000132323232533301f3371e00e004266e95200033023374c00297ae0133006006003375660400066eb8c078008c088008c080004dd5980d800980d800980d0011bac301800130180013017001300e005375c602800260180022c602400260240046020002601000429309b2b19299980519b874800000454ccc034c02000c526161533300a3370e90010008a99980698040018a4c2c2c60100046eb8004dd6800918029baa001230033754002ae6955ceaab9e5573eae815d0aba201",
+      "hash": "378c91fc613ac84dbd6962076ed17e33225d46a1de37c3384d8dbbc8"
+    }
+  ],
+  "definitions": {
+    "ByteArray": {
+      "dataType": "bytes"
+    },
+    "Int": {
+      "dataType": "integer"
+    },
+    "mint/Action": {
+      "title": "Action",
+      "anyOf": [
+        {
+          "title": "Mint",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": []
+        },
+        {
+          "title": "Burn",
+          "dataType": "constructor",
+          "index": 1,
+          "fields": []
+        }
+      ]
+    }
+  }
+}
