@@ -1,0 +1,14 @@
+name = "golddydev/mint-cip68"
+version = "0.0.0"
+license = "Apache-2.0"
+description = "Aiken contracts for project 'golddydev/mint-cip68'"
+
+[repository]
+user = "golddydev"
+project = "mint-cip68"
+platform = "github"
+
+[[dependencies]]
+name = "aiken-lang/stdlib"
+version = "1.7.0"
+source = "github"
